@@ -1,0 +1,41 @@
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import React from 'react';
+import { Article } from '@components/Article';
+import Head from 'next/head';
+
+export type Post = {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const posts: Post[] = await res.json();
+
+  return {
+    props: {
+      posts,
+    },
+  };
+};
+
+const About: React.FC = ({
+  posts,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  return (
+    <Article>
+      <Head>
+        <title>Article</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main>test</main>
+
+      <footer></footer>
+    </Article>
+  );
+};
+
+export default About;
