@@ -1,11 +1,13 @@
 import Head from 'next/head';
-import styled from '@emotion/styled';
+import tw from 'twin.macro';
 import { Article } from '@components/Article';
 
-const Title = styled.h1``;
-const Container = styled.div``;
+const Title = tw.h1`
+  text-pink-500
+`;
+const Container = tw.div``;
 
-const title = 'Aymen blog';
+const title = 'Aymen blog test';
 
 export default function Home() {
   return (

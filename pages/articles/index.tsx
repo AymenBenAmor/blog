@@ -1,5 +1,5 @@
+import * as React from 'react';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import React from 'react';
 import { Article } from '@components/Article';
 import Head from 'next/head';
 

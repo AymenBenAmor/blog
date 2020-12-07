@@ -10,12 +10,18 @@
     "lint": "eslint --ext .ts,.tsx"
   },
   "dependencies": {
+    "@babel/core": "^7.12.9",
+    "@emotion/babel-preset-css-prop": "^11.0.0",
     "@emotion/core": "^11.0.0",
+    "@emotion/css": "^11.0.0",
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
+    "@zeit/next-css": "^1.0.1",
     "next": "10.0.3",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "tailwindcss": "^2.0.1",
+    "twin.macro": "^2.0.4"
   },
   "devDependencies": {
     "@types/node": "^14.14.10",
@@ -32,7 +38,8 @@
     "husky": "^4.3.0",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
-    "typescript": "^4.1.2"
+    "typescript": "^4.1.2",
+    "typescript-plugin-tw-template": "^2.1.0"
   },
   "husky": {
     "hooks": {
