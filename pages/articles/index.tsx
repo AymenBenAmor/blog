@@ -21,9 +21,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const About: React.FC = ({
-  posts,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+const About = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Article>
       <Head>

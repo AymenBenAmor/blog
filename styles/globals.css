@@ -1,0 +1,15 @@
+html body {
+  --primary: #000000;
+  --secondary: #032a54;
+  --tertiary: #858585;
+  --background: #fff;
+  background: var(--background);
+}
+
+html body.dark {
+  --primary: #b0175e;
+  --secondary: #2265bc;
+  --tertiary: #209986;
+  --background: #000d21;
+  background: var(--background);
+}

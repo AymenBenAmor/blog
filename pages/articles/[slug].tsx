@@ -53,9 +53,7 @@ export const getStaticProps: GetStaticProps = async (
   };
 };
 
-const BlogPost: React.FC = ({
-  post,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+const BlogPost = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Article>
       <Head>

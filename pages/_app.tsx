@@ -1,10 +1,11 @@
 import { GlobalStyles } from 'twin.macro';
 import { AppProps } from 'next/app';
-import { ReactNode } from 'react';
 import { CacheProvider } from '@emotion/react';
 import { cache } from '@emotion/css';
 
-function MyApp({ Component, pageProps }: AppProps): ReactNode {
+import '../styles/globals.css';
+
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <CacheProvider value={cache}>
       <GlobalStyles />

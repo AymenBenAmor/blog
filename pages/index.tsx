@@ -1,28 +1,27 @@
 import Head from 'next/head';
 import tw from 'twin.macro';
-import { Article } from '@components/Article';
+import Layout from '@components/Layout';
+import Header from '@components/Header';
 
-const Title = tw.h1`
-  text-pink-500
-`;
 const Container = tw.div``;
 
 const title = 'Aymen blog test';
 
-export default function Home() {
+const Home = () => {
   return (
-    <Article>
+    <Layout>
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Header />
       <main>
-        <Title>{title}</Title>
         <Container>some content</Container>
       </main>
 
       <footer></footer>
-    </Article>
+    </Layout>
   );
-}
+};
+
+export default Home;

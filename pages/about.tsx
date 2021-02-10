@@ -6,7 +6,7 @@ import { Article } from '@components/Article';
 const Title = styled.h1``;
 const Container = styled.div``;
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <Article>
       <Head>

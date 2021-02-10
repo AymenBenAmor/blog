@@ -1,6 +1,3 @@
-import styled from '@emotion/styled';
+import tw from 'twin.macro';
 
-export const Article = styled.article`
-  margin: 0 auto;
-  max-width: 500px;
-`;
+export const Article = tw.article``;
