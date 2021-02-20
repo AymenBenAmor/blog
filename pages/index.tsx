@@ -1,7 +1,6 @@
 import Head from 'next/head';
-import tw from 'twin.macro';
+import tw, { styled } from 'twin.macro';
 import Layout from '@components/Layout';
-import Header from '@components/Header';
 
 const Container = tw.div``;
 
@@ -14,12 +13,11 @@ const Home = () => {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <main>
-        <Container>some content</Container>
-      </main>
-
-      <footer></footer>
+      <Container>some content</Container>
+      <Container>some content 2</Container>
+      <Container>some content 3</Container>
+      <Container>some content 4</Container>
+      <Container>some content 5</Container>
     </Layout>
   );
 };

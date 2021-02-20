@@ -13,3 +13,5 @@ html body.dark {
   --background: #000d21;
   background: var(--background);
 }
+main {
+}

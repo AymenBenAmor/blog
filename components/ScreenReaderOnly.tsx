@@ -9,7 +9,7 @@ const HiddenSpan = tw.span`
   sr-only
 `;
 
-const ScreenReadersOnly = ({ children, ...delegated }: Props) => {
+export const ScreenReadersOnly = ({ children, ...delegated }: Props) => {
   const [forceShow, setForceShow] = React.useState(false);
   React.useEffect(() => {
     if (process.env.NODE_ENV !== 'production') {
@@ -36,5 +36,3 @@ const ScreenReadersOnly = ({ children, ...delegated }: Props) => {
   }
   return <HiddenSpan {...delegated}>{children}</HiddenSpan>;
 };
-
-export default ScreenReadersOnly;
