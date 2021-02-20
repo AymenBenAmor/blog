@@ -75,19 +75,41 @@ const MenuIcon = tw.div`
 `;
 
 const StyledBarUp = styled.span`
+  transition: transform 250ms;
   ${() => tw`w-8 h-1 bg-primary m-1 block`}
   ${({ open }: Open) => `transform: ${open ? 'rotate(45deg)' : 'none'}`}
 `;
 const StyledBarDown = styled.span`
+  transition: transform 250ms;
   ${() => tw`w-8 h-1 bg-primary m-1 block`}
   ${({ open }: Open) =>
     `transform: ${open ? 'rotate(-45deg) translate(5px, -6px)' : 'none'}`}
 `;
 
 const StyledMobileNav = styled.div`
+  animation: myBackgroundColor 500ms;
+  @keyframes toSecondary {
+    from {
+      background-color: var(--background);
+    }
+    to {
+      background-color: var(--secondary);
+    }
+  }
+  @keyframes toBackground {
+    from {
+      background-color: var(--secondary);
+    }
+    to {
+      background-color: var(--background);
+    }
+  }
   ${() =>
     tw`bg-secondary w-full h-full absolute inset-0 md:hidden flex-col justify-between z-10`}
-  ${({ open }: Open) => `display: ${open ? 'flex' : 'none'}`}
+  ${({ open }: Open) => `
+    animation: ${open ? 'toSecondary' : 'toBackground'} 500ms;
+    display: ${open ? 'flex' : 'none'}
+  `}
 `;
 
 const StyledMobileNavFooter = tw.div`
