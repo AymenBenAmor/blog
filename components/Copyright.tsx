@@ -1,11 +1,12 @@
 import tw from 'twin.macro';
 
 const StyledCopyright = tw.div`
-  text-sm
+  text-xs flex flex-col justify-end
 `;
 
-export const Copyright = () => (
+export const Copyright = ({ withBreak }: { withBreak?: boolean }) => (
   <StyledCopyright>
-    © 2021-present Aymen Bem Amor. All Rights Reserved.
+    © 2021-present Aymen Bem Amor. {withBreak ? <br /> : ''} All Rights
+    Reserved.
   </StyledCopyright>
 );

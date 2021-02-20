@@ -9,7 +9,7 @@ const StyledLi = tw.li`
   p-2
 `;
 const StyledDiv = tw.div`
-  p-8
+  px-2 flex flex-col justify-end
 `;
 
 type SocialLink = {
@@ -42,7 +42,7 @@ type Icon = {
 };
 
 const displayIcon = ({ label, icon }: Icon) => (
-  <Image alt={label} src={`/${icon}.svg`} height={30} width={30} />
+  <Image alt={label} src={`/${icon}.svg`} height={20} width={20} />
 );
 
 export const SocialLinks = () => (

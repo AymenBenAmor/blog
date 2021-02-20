@@ -1,7 +1,13 @@
-import tw from 'twin.macro';
+import * as React from 'react';
+import tw, { styled } from 'twin.macro';
 import Link from 'next/link';
 import { ScreenReadersOnly } from '@components/ScreenReaderOnly';
 import { SocialLinks } from '@components/SocialLinks';
+import { Copyright } from '@components/Copyright';
+
+type Open = {
+  open: boolean;
+};
 
 const links = [
   {
@@ -31,8 +37,12 @@ const links = [
   },
 ];
 
+const StyledHeaderContainer = tw.header`
+  w-full shadow-md pt-4 px-4 sm:px-8 justify-center flex flex-row
+`;
+
 const StyledHeader = tw.header`
-  pt-4 px-8 flex flex-row justify-between w-full max-w-5xl shadow-md
+  max-w-5xl flex flex-row justify-between w-full
 `;
 
 // todo this
@@ -61,55 +71,72 @@ const StyledLI = tw.li`
 `;
 
 const MenuIcon = tw.div`
-  text-primary md:hidden p-2 pr-4
+  text-primary md:hidden absolute top-5 right-4 z-20 p-2
 `;
-const StyledBarUp = tw.div`
-  w-8 h-1 bg-primary m-1
+
+const StyledBarUp = styled.span`
+  ${() => tw`w-8 h-1 bg-primary m-1 block`}
+  ${({ open }: Open) => `transform: ${open ? 'rotate(45deg)' : 'none'}`}
 `;
-const StyledBarDown = tw.div`
-  w-8 h-1 bg-primary m-1
+const StyledBarDown = styled.span`
+  ${() => tw`w-8 h-1 bg-primary m-1 block`}
+  ${({ open }: Open) =>
+    `transform: ${open ? 'rotate(-45deg) translate(5px, -6px)' : 'none'}`}
 `;
-const StyledMobileNav = tw.div`
-  bg-secondary w-full h-full absolute inset-0 md:hidden justify-between flex flex-col
+
+const StyledMobileNav = styled.div`
+  ${() =>
+    tw`bg-secondary w-full h-full absolute inset-0 md:hidden flex-col justify-between z-10`}
+  ${({ open }: Open) => `display: ${open ? 'flex' : 'none'}`}
+`;
+
+const StyledMobileNavFooter = tw.div`
+  flex flex-row justify-between text-tertiary p-4
 `;
 
 const Header = () => {
+  const [open, setOpen] = React.useState(false);
   return (
-    <StyledHeader>
-      <StyledLogoContainer>
-        <StyledH1>Aymen Ben Amor</StyledH1>
-      </StyledLogoContainer>
-      <nav>
-        <StyledUL>
-          {links.map(item => (
-            <StyledLI key={item.id}>
-              <Link href={item.href}>
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a>{item.label}</a>
-              </Link>
-            </StyledLI>
-          ))}
-        </StyledUL>
-        <MenuIcon>
-          <ScreenReadersOnly>Open Navigation</ScreenReadersOnly>
-          <StyledBarUp />
-          <StyledBarDown />
-        </MenuIcon>
-        <StyledMobileNav>
-          <StyledULMobile>
+    <StyledHeaderContainer>
+      <StyledHeader>
+        <StyledLogoContainer>
+          <StyledH1>Aymen Ben Amor</StyledH1>
+        </StyledLogoContainer>
+        <nav>
+          <StyledUL>
             {links.map(item => (
-              <StyledLIMobile key={item.id}>
+              <StyledLI key={item.id}>
                 <Link href={item.href}>
                   {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                   <a>{item.label}</a>
                 </Link>
-              </StyledLIMobile>
+              </StyledLI>
             ))}
-          </StyledULMobile>
-          <SocialLinks />
-        </StyledMobileNav>
-      </nav>
-    </StyledHeader>
+          </StyledUL>
+          <MenuIcon onClick={() => setOpen(previousValue => !previousValue)}>
+            <ScreenReadersOnly>Open Navigation</ScreenReadersOnly>
+            <StyledBarUp open={open} />
+            <StyledBarDown open={open} />
+          </MenuIcon>
+          <StyledMobileNav open={open}>
+            <StyledULMobile>
+              {links.map(item => (
+                <StyledLIMobile key={item.id}>
+                  <Link href={item.href}>
+                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                    <a>{item.label}</a>
+                  </Link>
+                </StyledLIMobile>
+              ))}
+            </StyledULMobile>
+            <StyledMobileNavFooter>
+              <Copyright withBreak />
+              <SocialLinks />
+            </StyledMobileNavFooter>
+          </StyledMobileNav>
+        </nav>
+      </StyledHeader>
+    </StyledHeaderContainer>
   );
 };
 

@@ -7,13 +7,13 @@ type Props = {
 };
 
 const Main = styled.main`
-  grid-template-columns: 1fr 70% 1fr;
+  grid-template-columns: 1fr min(100%, 65ch) 1fr;
   min-height: 75vh;
   ${() => tw`grid`}
 `;
 
 const MainContainer = tw.div`
-  grid gap-y-8 py-8
+  grid gap-y-8 py-8 px-8
 `;
 
 const StyledPageContainer = styled.main`
