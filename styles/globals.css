@@ -1,7 +1,7 @@
 html body {
   --primary: #000000;
-  --secondary: #032a54;
-  --tertiary: #858585;
+  --secondary: #0a6c74;
+  --tertiary: #3b82f6;
   --background: #fff;
   background: var(--background);
 }
@@ -13,5 +13,26 @@ html body.dark {
   --background: #000d21;
   background: var(--background);
 }
-main {
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 24px;
+  color: var(--secondary);
+}
+h3 {
+  font-size: 24px;
+  color: var(--tertiary);
+  font-weight: 500;
+}
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 16px;
 }

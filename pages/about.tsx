@@ -1,26 +1,25 @@
 import * as React from 'react';
 import Head from 'next/head';
 import styled from '@emotion/styled';
-import { Article } from '@components/Article';
+import Layout from '@components/Layout';
+import { Heading } from '@components/Heading';
 
-const Title = styled.h1``;
 const Container = styled.div``;
 
 const About = () => {
   return (
-    <Article>
+    <Layout>
       <Head>
         <title>About Aymen Ben Amor</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
-        <Title>Who am I?</Title>
-        <Container>some content</Container>
-      </main>
-
-      <footer></footer>
-    </Article>
+      <div>
+        <Heading tag="h2">About me</Heading>
+        <Container>
+          I am still building this section so come back later to check it out :){' '}
+        </Container>
+      </div>
+    </Layout>
   );
 };
 

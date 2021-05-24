@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ScreenReadersOnly } from '@components/ScreenReaderOnly';
 import { SocialLinks } from '@components/SocialLinks';
 import { Copyright } from '@components/Copyright';
+import { CustomLink } from './Link';
 
 type Open = {
   open: boolean;
@@ -24,17 +25,12 @@ const links = [
     id: 'blog',
     label: 'Blog',
     href: '/blog',
-  },
+  } /*
   {
     id: 'talks',
     label: 'Talks',
     href: '/talks',
-  },
-  {
-    id: 'contact',
-    label: 'Contact',
-    href: '/contact',
-  },
+  },*/,
 ];
 
 const StyledHeaderContainer = tw.header`
@@ -50,9 +46,19 @@ const StyledLogoContainer = tw.div`
   p-2
 `;
 
-// todo this
-const StyledH1 = tw.div`
-  text-xl text-primary
+const StyledLogo = tw.a`
+  text-xl text-primary text-blue-600 
+`;
+const StyledLink = styled.a`
+  font-weight: 350;
+  cursor: pointer;
+  &.selected {
+    color: var(--tertiary);
+    font-weight: 700;
+  }
+  &:hover {
+    color: var(--tertiary);
+  }
 `;
 
 const StyledUL = tw.ul`
@@ -64,7 +70,7 @@ const StyledULMobile = tw.ul`
 `;
 
 const StyledLIMobile = tw.li`
-  text-3xl p-8 hover:underline block w-min
+  text-3xl p-8 hover:underline block w-min text-white
 `;
 const StyledLI = tw.li`
   p-2
@@ -122,18 +128,25 @@ const Header = () => {
     <StyledHeaderContainer>
       <StyledHeader>
         <StyledLogoContainer>
-          <StyledH1>Aymen Ben Amor</StyledH1>
+          <Link href="/">
+            <StyledLogo>Aymen Ben Amor</StyledLogo>
+          </Link>
         </StyledLogoContainer>
         <nav>
           <StyledUL>
             {links.map(item => (
               <StyledLI key={item.id}>
-                <Link href={item.href}>
+                <CustomLink href={item.href}>
                   {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                  <a>{item.label}</a>
-                </Link>
+                  <StyledLink>{item.label}</StyledLink>
+                </CustomLink>
               </StyledLI>
             ))}
+            <StyledLI>
+              <StyledLink href="mailto:director@b2asolutions.com">
+                Contact
+              </StyledLink>
+            </StyledLI>
           </StyledUL>
           <MenuIcon onClick={() => setOpen(previousValue => !previousValue)}>
             <ScreenReadersOnly>Open Navigation</ScreenReadersOnly>
@@ -144,12 +157,17 @@ const Header = () => {
             <StyledULMobile>
               {links.map(item => (
                 <StyledLIMobile key={item.id}>
-                  <Link href={item.href}>
+                  <CustomLink href={item.href}>
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a>{item.label}</a>
-                  </Link>
+                    <StyledLink>{item.label}</StyledLink>
+                  </CustomLink>
                 </StyledLIMobile>
               ))}
+              <StyledLIMobile>
+                <StyledLink href="mailto:director@b2asolutions.com">
+                  Contact
+                </StyledLink>
+              </StyledLIMobile>
             </StyledULMobile>
             <StyledMobileNavFooter>
               <Copyright withBreak />

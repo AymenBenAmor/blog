@@ -9,27 +9,22 @@ type Props = {
 const Main = styled.main`
   grid-template-columns: 1fr min(100%, 65ch) 1fr;
   min-height: 75vh;
-  ${() => tw`grid`}
-`;
-
-const MainContainer = tw.div`
-  grid gap-y-8 py-8 px-8
+  && > * {
+    grid-column: 2;
+  }
+  ${() => tw`grid my-8 px-8`}
 `;
 
 const StyledPageContainer = styled.main`
   grid-template-rows: 70px 1fr 100px;
-  ${() => tw`grid`}
+  ${() => tw`grid font-sans`}
 `;
 
 const Layout = ({ children }: Props) => {
   return (
     <StyledPageContainer>
       <Header />
-      <Main>
-        <span />
-        <MainContainer>{children}</MainContainer>
-        <span />
-      </Main>
+      <Main>{children}</Main>
       <Footer />
     </StyledPageContainer>
   );
