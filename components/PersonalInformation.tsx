@@ -57,6 +57,7 @@ export const PersonalInformation = () => {
         <Image
           src="/aymen-simpson-transparent.png"
           alt="Simpsons style picture of Aymen"
+          quality={50}
           width={462}
           height={653}
         />

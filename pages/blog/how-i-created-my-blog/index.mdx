@@ -1,0 +1,152 @@
+import { BlogPost } from '../../../components/BlogPost';
+
+export const meta = {
+  title: 'How I created my blog',
+  description:
+    'How I created my blog, What technical decisions did I take and why?',
+  date: 1621873425848,
+  readTime: 2,
+  hidden: true,
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+# How I created my blog and which decisions did I take
+
+<br />
+Hello there...
+<br />
+<p>
+  First of all welcome to my blog and to my first Blog Post. In this article I
+  am going to explain how I created this blog and why I decided to do it.
+</p>
+<p>
+  I've been thinking about creating a blog since a long time already but
+  everytime I wanted to progress on it, I ended up watching netflix for hours.
+  "Procrastination at it's finest".
+  <br />
+  Okey, let's cut to the chase!
+</p>
+
+## Why creating my own blog
+
+<p>
+  I wanted to start blogging since quite some time. I wanted to share my
+  thoughts, ideas and also share tips and tricks about several subjects. The
+  subjects that I will be blogging about will go from technical tutorials, to
+  travel and trips blog posts, to ideas about productivity and how to manage a
+  community (I am the founder of{' '}
+  <a href="https://bejs.io">BeJS: A JavaScript community in Belgium</a>) and
+  anything that will cross my mind and that I will think someone out there can
+  relate to.
+</p>
+<p>
+  But why did I need to create my own blog? why not use dev.to, medium or the
+  hundreds of different alternatives out there. <br />
+  Well I was hesitant at first! But then I signed up for monica's lent newsletter
+  and got convinced to start publishing on my own domain.
+</p>
+<p>
+  The main advantage of publishing on your own domain is that you control it and
+  you own it. It is just you and your content, no one else. You can do whatever
+  you want with it. Isn't that freedom at it's best? Also, if you're creating
+  content for another platform, they can change their algorithm, lose their
+  funding, suspend your account or whatever they like.
+</p>
+<p>
+  Second reason is that you will be able to create a mailing list and an
+  audience (You will be able to use this later on for launching your products,
+  or anything you like)
+</p>
+<p>
+  You learn new technologies, test others, and if you don't procrastinating you
+  get to have a lot of fun while implementing it.
+</p>
+<p>
+  If you are new to coding and need to show up your skills you can use it as a
+  code sample. Be creative, show off your technical skills and share that code
+  with recruiters
+</p>
+<p>
+  There is probably way more reasons for creating your own blog, so do not
+  hesitate to tell me what convinced you create your own blog!
+  <br />
+  Now enough with the why, let's get to the how
+</p>
+
+## Choosing the tech stack
+
+### NextJS vs Gatsby
+
+<p>
+  Being a fan of React I wanted to use React to build my blog this narrowed the
+  possibilities to the two big names when it comes to SSG: (static site
+  generation). Gatsby Vs NextJS!
+</p>
+<p>
+  I've been using gatsby for quite some time now, ({' '}
+  <a href="https://www.b2asolutions.com/">my company's website</a> and{' '}
+  <a href="https://www.bejs.io/">BeJS.io</a> website use gatsby) and I think it
+  is a great tool and the ready to use plugins provided by the community make it
+  so easy to bootstrap a blog in few seconds. However I've been founding it
+  quite slow lately and I wanted to learn something new! I was also looking to
+  learn NextJS because I am super hyped about{' '}
+  <a href="https://blitzjs.com/">Blitz.js</a> the new React framework and It is
+  built on top of Next. I think it will be an amazing framework and I would like
+  to contribute to it in the future so I need to learn Next!
+</p>
+<span>
+  TODO (NOTE component) NOTE: From what I understood the blitz.js team will fork
+  nextjs as their customizations are becoming pretty big so we need to keep an
+  eye on that.
+</span>
+
+### TailwindCSS vs CSS in JS!
+
+<p>
+  well why not both! So I've been thinking about whether to use CSS in JS or
+  tailwindCSS which became quite trendy lately and I could not decide! Luckily,
+  on that late night I receive an email from{' '}
+  <a href="https://twitter.com/mxstbr">Max stoiber</a> the creator of a CSS in
+  JS library called styled-components. In that newsletter he talked about{' '}
+  <a href="https://github.com/ben-rogerson/twin.macro">twin.macro</a>... A new
+  CSS in JS library that came out and that support tailwindCSS. You can find the
+  article <a href="https://mxstbr.com/thoughts/tailwind/">here</a>
+</p>
+<p>
+  I was quickly convinced and decided to give twin.macro a try and It has been
+  great. With tailwind it's very easy to progress and create nice designs.
+</p>
+
+### CMS vs MDX
+
+<p>
+  For those who do not know <a href="https://mdxjs.com/">MDX</a>: It is
+  "Markdown for the component era" as they explain it themselves. It basically
+  allows us to use markdown and jsx at the same time! we use it in my job for
+  documentation with storybook and it's pretty easy to use and setup. <br />
+  With the abundance of gatsby plugins provided for headless CMSs (wordpress, contentful...)
+  it would be easy to use a CMS to create content for my blog. <br />
+  Being a developer, I like my IDE and don't like leaving it for too long
+  (unless it's to watch dumb netflix shows) So I decided to use MDX.
+</p>
+
+## Conclusion
+
+<p>
+  Another benefit of having your own blog: You discover your weaknesses! While
+  developing this blog I fell horrible when working with CSS. I was hesitant
+  about everything, fighting with it, and searching on google every two seconds.
+  So I decided to buy{' '}
+  <a href="https://twitter.com/joshwcomeau">Joshua Comeau</a>'s course:{' '}
+  <a href="https://css-for-js.dev/">CSS for JS devs</a>
+  and the plan is to redesign my blog once I finish that course! It does not matter
+  what technology you use for your blog as long as you do it. Don't get me wrong!
+  You don't have to start a blog if you don't like it: Some of the best developers
+  I know don't have a blog. All I'm trying to say is that it is a proven way of progression
+  on your career, and also on other levels as explained above. If you already have
+  a blog, I am curious to know what technology you used and why you decided to create
+  your own blog! Come talk to me on <a href="https://twitter.com/Aymen_Ben_Amor">
+    twitter
+  </a>! :)
+</p>

@@ -2,7 +2,7 @@ import tw, { styled } from 'twin.macro';
 import { PostSummary } from './BlogPostSummary';
 import { Heading } from '@components/Heading';
 
-type Meta = {
+export type Meta = {
   date: string;
   description: string;
   readTime: number;

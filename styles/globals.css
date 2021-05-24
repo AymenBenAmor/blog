@@ -17,10 +17,11 @@ html body.dark {
 h1 {
   font-size: 20px;
   font-weight: bold;
+  color: var(--secondary);
 }
 h2 {
   font-size: 24px;
-  color: var(--secondary);
+  color: var(--tertiary);
 }
 h3 {
   font-size: 24px;
@@ -35,4 +36,7 @@ h5 {
 }
 h6 {
   font-size: 16px;
+}
+p {
+  text-align: justify;
 }
