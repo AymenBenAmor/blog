@@ -7,6 +7,8 @@ export type Meta = {
   description: string;
   readTime: number;
   title: string;
+  image: string;
+  link: string;
 };
 
 export type Post = {
@@ -31,7 +33,7 @@ flex-col flex sm:flex-row
 `;
 export const PostsContainer = ({ posts, title }: Props) => (
   <StyledPostsContainer>
-    <Heading tag="h2">{title}</Heading>
+    <Heading tag="h1">{title}</Heading>
     <StyledPostsList>
       {posts.map(post => (
         <PostSummary key={post.link} post={post} />

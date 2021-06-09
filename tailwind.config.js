@@ -779,7 +779,6 @@ module.exports = {
         secondary: 'var(--secondary)',
         tertiary: 'var(--tertiary)',
         background: 'var(--background)',
-        test: 'var(--background)',
       },
     },
   },

@@ -20,17 +20,17 @@ type SocialLink = {
 
 const socialLinks: SocialLink[] = [
   {
-    href: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/aymen-ben-amor-30281244/',
     label: 'LinkedIn',
     icon: 'linkedin-icon',
   },
   {
-    href: 'Twitter',
+    href: 'https://twitter.com/Aymen_Ben_Amor',
     label: 'Twitter',
     icon: 'twitter-icon',
   },
   {
-    href: 'Github',
+    href: 'https://github.com/AymenBenAmor',
     label: 'Github',
     icon: 'github-icon',
   },

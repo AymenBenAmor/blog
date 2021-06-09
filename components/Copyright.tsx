@@ -5,9 +5,9 @@ type Props = { withBreak?: boolean };
 const StyledCopyright = styled.div`
   ${({ withBreak }: Props) =>
     withBreak
-      ? tw`text-xs flex flex-col justify-end text-white`
+      ? tw`text-base flex flex-col justify-end text-white`
       : tw`
-text-xs flex flex-col justify-end`}
+text-base flex flex-col justify-end`}
 `;
 export const Copyright = ({ withBreak }: Props) => (
   <StyledCopyright withBreak={withBreak}>

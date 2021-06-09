@@ -1,26 +1,34 @@
 import tw, { styled } from 'twin.macro';
 import Image from 'next/image';
+import NewsletterForm from '@components/NewsletterForm';
+import { Heading } from '@components/Heading';
+import { BeautifulLink } from '@components/BeautifulLink';
+import { Paragraph } from '@components/Paragraph';
 
 const StyledPersonalInfo = styled.div`
   width: 100%;
-  margin: 5rem auto;
   max-width: 1500px;
   && {
     grid-column: 1 / -1;
   }
-  ${() => tw`mt-16 flex flex-col md:flex-row`}
+  ${() => tw`flex flex-col md:flex-row`}
 `;
 
 const StyledPresentation = tw.div`
   sm:px-20 flex-row md:w-8/12
 `;
 
-const StyledImageContainer = tw.div`
-  flex flex-row justify-center md:w-1/2
+const StyledImageContainer = styled.div`
+  max-height: 653px;
+  ${() => tw`flex flex-row justify-center lg:w-1/2`}
 `;
 
 const StyledContent = tw.div`
 text-justify
+`;
+
+const StyledDiv = tw.div`
+  my-4
 `;
 
 export const PersonalInformation = () => {
@@ -28,37 +36,62 @@ export const PersonalInformation = () => {
     <StyledPersonalInfo>
       <StyledPresentation>
         <StyledContent>
-          <h3>Hi there,</h3>
-          <p>
-            Welcome to my digital garden. My name is Aymen and I am a web
-            developer Based in Brussels but I am kinda universal hihi...
-          </p>
-          <p>
-            My mother is originally from Belarus but she used to live in Russia
-            so we have Russian citizenship. My father is from Tunisia and I was
-            born in Koweit.
-          </p>
-          <p>
-            I have been living in Brussels for around 7 years now where I work
-            as a freelance Front-end developer.
-          </p>
-          <p>
-            I am also a JS geek (Love javascript) and am an active member of the
-            community. I am the founder of{' '}
-            <a href="https://www.bejs.io/">BeJS</a>: A JavaScript community in
-            Belgium and I manage a weekly newsletter about JavaScript. I also
-            contribute to open source projects such as lion. By the way, I am a
-            huge react fan and enthusiast.
-          </p>
+          <Heading tag="h2">Hi there,</Heading>
+          <StyledDiv>
+            <Paragraph>
+              Welcome to my digital garden. My name is Aymen and I am a web
+              developer Based in Brussels but I am kinda universal hihi...
+            </Paragraph>
+            <Paragraph>
+              My mother is originally from Belarus but she used to live in
+              Russia so we have Russian citizenship. My father is from Tunisia
+              and I was born in Koweit.
+            </Paragraph>
+            <Paragraph>
+              I have been living in Brussels for around 7 years now where I work
+              as a freelance Front-end developer.
+            </Paragraph>
+            <Paragraph>
+              I am also a JS geek (Love javascript) and am an active member of
+              the community. I am the founder of{' '}
+              <BeautifulLink
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.bejs.io/"
+              >
+                BeJS
+              </BeautifulLink>
+              : A JavaScript community in Belgium and I manage a weekly
+              newsletter about JavaScript. I also contribute to open source
+              projects such as lion. By the way, I am a huge React fan and
+              enthusiast. <br />I also recently announced the First React
+              conference in Brussels! So if you wanna join us for a day full of
+              React hot topics and fun, get your ticket here:{' '}
+              <BeautifulLink
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.react.brussels/"
+              >
+                React Brussels
+              </BeautifulLink>
+            </Paragraph>
+            <Paragraph>
+              I will use this domain to publish articles about the things I am
+              passionate about. There will be articles about Coding, JavaScript,
+              Involvement in the community, Organizing community events, and
+              Travelling.
+            </Paragraph>
+          </StyledDiv>
         </StyledContent>
-        <div>Add newsletter form here in a box</div>
+        <NewsletterForm />
       </StyledPresentation>
       <StyledImageContainer>
         <Image
+          layout="intrinsic"
           src="/aymen-simpson-transparent.png"
           alt="Simpsons style picture of Aymen"
           quality={50}
-          width={462}
+          width={200}
           height={653}
         />
       </StyledImageContainer>

@@ -73,7 +73,7 @@ const StyledLIMobile = tw.li`
   text-3xl p-8 hover:underline block w-min text-white
 `;
 const StyledLI = tw.li`
-  p-2
+  p-2 text-primary
 `;
 
 const MenuIcon = tw.div`
@@ -124,12 +124,19 @@ const StyledMobileNavFooter = tw.div`
 
 const Header = () => {
   const [open, setOpen] = React.useState(false);
+  React.useEffect(() => {
+    if (open) {
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.documentElement.style.overflow = 'auto';
+    }
+  }, [open]);
   return (
     <StyledHeaderContainer>
       <StyledHeader>
         <StyledLogoContainer>
           <Link href="/">
-            <StyledLogo>Aymen Ben Amor</StyledLogo>
+            <StyledLogo href="/">Aymen Ben Amor</StyledLogo>
           </Link>
         </StyledLogoContainer>
         <nav>

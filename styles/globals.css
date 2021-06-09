@@ -1,6 +1,6 @@
 html body {
-  --primary: #000000;
-  --secondary: #0a6c74;
+  --primary: #373737;
+  --secondary: #044e54;
   --tertiary: #3b82f6;
   --background: #fff;
   background: var(--background);
@@ -22,11 +22,11 @@ h1 {
 h2 {
   font-size: 24px;
   color: var(--tertiary);
+  font-weight: 500;
 }
 h3 {
   font-size: 24px;
   color: var(--tertiary);
-  font-weight: 500;
 }
 h4 {
   font-size: 16px;
@@ -39,4 +39,13 @@ h6 {
 }
 p {
   text-align: justify;
+  color: #484848;
+}
+input {
+  background-color: #eaeaea;
+  padding: 8px;
+  min-width: 100%;
+}
+a {
+  cursor: pointer;
 }

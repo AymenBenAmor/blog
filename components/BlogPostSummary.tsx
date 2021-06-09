@@ -4,16 +4,16 @@ import type { Post } from './PostsContainer';
 
 const StyledBlogPostSummary = styled.article`
   &:hover {
-    h3 {
-      font-size: 25px;
-      transition: font-size 1s;
+    div {
+      visibility: visible;
+      transition: visibility 0.5s ease-in;
     }
   }
   ${() => tw`p-4 pl-0`}
 `;
 
 const StyledReadMore = tw.div`
-  text-secondary mt-4 flex w-full justify-end font-extrabold
+  text-secondary mt-4 flex w-full justify-end font-extrabold invisible
 `;
 
 export const PostSummary = ({ post }: { post: Post }) => {

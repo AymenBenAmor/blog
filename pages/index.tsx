@@ -13,7 +13,7 @@ const Home = () => {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PostsContainer posts={posts} title="Recently Published" />
+      <PostsContainer posts={posts} title="Recently published articles" />
       <PersonalInformation />
     </Layout>
   );
