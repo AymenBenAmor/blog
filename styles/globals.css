@@ -1,15 +1,51 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Comic Sans MS';
+html body {
+  --primary: #373737;
+  --secondary: #044e54;
+  --tertiary: #3b82f6;
+  --background: #fff;
+  background: var(--background);
 }
 
+html body.dark {
+  --primary: #b0175e;
+  --secondary: #2265bc;
+  --tertiary: #209986;
+  --background: #000d21;
+  background: var(--background);
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary);
+}
+h2 {
+  font-size: 24px;
+  color: var(--tertiary);
+  font-weight: 500;
+}
+h3 {
+  font-size: 24px;
+  color: var(--tertiary);
+}
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 16px;
+}
+p {
+  text-align: justify;
+  color: #484848;
+}
+input {
+  background-color: #eaeaea;
+  padding: 8px;
+  min-width: 100%;
+}
 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+  cursor: pointer;
 }
