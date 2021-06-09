@@ -9,6 +9,7 @@ type BlogPostProps = {
   children: React.ReactNode;
   meta: Meta;
 };
+const domain = 'https://www.aymenbenamor.com/';
 
 export const BlogPost = ({
   children,
@@ -20,7 +21,7 @@ export const BlogPost = ({
         <title>{title}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
-        <link rel="canonical" href={link} />
+        <link rel="canonical" href={`${domain}${link}`} />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={title} />

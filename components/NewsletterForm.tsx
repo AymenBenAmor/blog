@@ -26,7 +26,7 @@ const Row = tw.div`
 `;
 
 const StyledSuccessMessage = tw.span`
-  text-tertiary
+  text-tertiary text-center
 `;
 
 const initialForm = {
@@ -82,8 +82,10 @@ const NewsletterForm = () => {
         <div>
           <h3>You are in!</h3>
           <StyledSuccessMessage>
-            Thank you for your message. We will get back to you as soon as
-            possible!
+            Thank you for subscribing to my newsletter. I will keep you posted
+            about my activities and the new articles I write. Please add
+            hi@aymenbenamor.com to your contact list to be sure to receive the
+            newsletter.
           </StyledSuccessMessage>
         </div>
       ) : (
