@@ -7,4 +7,6 @@ const StyledLink = tw.a`
 
 type Props = React.HTMLProps<HTMLAnchorElement>;
 
-export const BeautifulLink = ({ ...props }: Props) => <StyledLink {...props} />;
+export const BeautifulLink = ({ ...props }: Props) => (
+  <StyledLink rel="noopener noreferrer" {...props} />
+);

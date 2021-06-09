@@ -1,13 +1,10 @@
 import * as React from 'react';
-import tw, { styled } from 'twin.macro';
+import tw from 'twin.macro';
 
-const StyledNote = styled.p`
-  && {
-    color: white;
-  }
-  ${() => tw`bg-yellow-500 p-4 rounded-md`}
+const StyledNote = tw.p`
+  bg-yellow-500 p-4 rounded-md text-white
 `;
 
-type Props = React.HTMLProps<HTMLDivElement>;
+type Props = React.HTMLProps<HTMLParagraphElement>;
 
-export const Note = ({ ...props }: Props) => <StyledNote {...props} />;
+export const Note = (props: Props) => <StyledNote {...props} />;

@@ -41,9 +41,11 @@ export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
   subjects that I will be blogging about will go from technical tutorials, to
   travel and trips blog posts, to ideas about productivity and how to manage a
   community (I am the founder of{' '}
-  <a href="https://bejs.io">BeJS: A JavaScript community in Belgium</a>) and
-  anything that will cross my mind and that I will think someone out there can
-  relate to.
+  <BeautifulLink target="_blank" href="https://bejs.io">
+    BeJS: A JavaScript community in Belgium
+  </BeautifulLink>
+  ) and anything that will cross my mind and that I will think someone out there
+  can relate to.
 </Paragraph>
 <Paragraph>
   But why did I need to create my own blog? why not use dev.to, medium or the
@@ -90,15 +92,24 @@ export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
 </Paragraph>
 <Paragraph>
   I've been using gatsby for quite some time now, ({' '}
-  <a href="https://www.b2asolutions.com/">my company's website</a> and{' '}
-  <a href="https://www.bejs.io/">BeJS.io</a> website use gatsby) and I think it
-  is a great tool and the ready to use plugins provided by the community make it
-  so easy to bootstrap a blog in few seconds. However I've been founding it
-  quite slow lately and I wanted to learn something new! I was also looking to
-  learn NextJS because I am super hyped about{' '}
-  <a href="https://blitzjs.com/">Blitz.js</a> the new React framework and It is
-  built on top of Next. I think it will be an amazing framework and I would like
-  to contribute to it in the future so I need to learn Next!
+  <BeautifulLink target="_blank" href="https://www.b2asolutions.com/">
+    my company's website
+  </BeautifulLink>{' '}
+  and{' '}
+  <BeautifulLink target="_blank" href="https://www.bejs.io/">
+    BeJS.io
+  </BeautifulLink>{' '}
+  website use gatsby) and I think it is a great tool and the ready to use
+  plugins provided by the community make it so easy to bootstrap a blog in few
+  seconds. However I've been founding it quite slow lately and I wanted to learn
+  something new! I was also looking to learn NextJS because I am super hyped
+  about{' '}
+  <BeautifulLink target="_blank" href="https://blitzjs.com/">
+    Blitz.js
+  </BeautifulLink>{' '}
+  the new React framework and It is built on top of Next. I think it will be an
+  amazing framework and I would like to contribute to it in the future so I need
+  to learn Next!
 </Paragraph>
 <Note>
   NOTE: From what I understood the blitz.js team will fork nextjs as their
@@ -111,11 +122,22 @@ export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
   well why not both! So I've been thinking about whether to use CSS in JS or
   tailwindCSS which became quite trendy lately and I could not decide! Luckily,
   on that late night I receive an email from{' '}
-  <a href="https://twitter.com/mxstbr">Max stoiber</a> the creator of a CSS in
-  JS library called styled-components. In that newsletter he talked about{' '}
-  <a href="https://github.com/ben-rogerson/twin.macro">twin.macro</a>... A new
-  CSS in JS library that came out and that support tailwindCSS. You can find the
-  article <a href="https://mxstbr.com/thoughts/tailwind/">here</a>
+  <BeautifulLink target="_blank" href="https://twitter.com/mxstbr">
+    Max stoiber
+  </BeautifulLink>{' '}
+  the creator of a CSS in JS library called styled-components. In that
+  newsletter he talked about{' '}
+  <BeautifulLink
+    target="_blank"
+    href="https://github.com/ben-rogerson/twin.macro"
+  >
+    twin.macro
+  </BeautifulLink>
+  ... A new CSS in JS library that came out and that support tailwindCSS. You
+  can find the article{' '}
+  <BeautifulLink target="_blank" href="https://mxstbr.com/thoughts/tailwind/">
+    here
+  </BeautifulLink>
 </Paragraph>
 <Paragraph>
   I was quickly convinced and decided to give twin.macro a try and It has been
@@ -125,10 +147,14 @@ export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
 <Heading tag="h3">CMS vs MDX</Heading>
 
 <Paragraph>
-  For those who do not know <a href="https://mdxjs.com/">MDX</a>: It is
-  "Markdown for the component era" as they explain it themselves. It basically
-  allows us to use markdown and jsx at the same time! we use it in my job for
-  documentation with storybook and it's pretty easy to use and setup. <br />
+  For those who do not know{' '}
+  <BeautifulLink target="_blank" href="https://mdxjs.com/">
+    MDX
+  </BeautifulLink>
+  : It is "Markdown for the component era" as they explain it themselves. It
+  basically allows us to use markdown and jsx at the same time! we use it in my
+  job for documentation with storybook and it's pretty easy to use and setup.{' '}
+  <br />
   With the abundance of gatsby plugins provided for headless CMSs (wordpress, contentful...)
   it would be easy to use a CMS to create content for my blog. <br />
   Being a developer, I like my IDE and don't like leaving it for too long
@@ -145,15 +171,14 @@ export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
   <BeautifulLink target="_blank" href="https://twitter.com/joshwcomeau">
     Joshua Comeau
   </BeautifulLink>
-  's course:{' '}
-  <BeautifulLink target="_blank" href="https://css-for-js.dev/">
+  's course: <BeautifulLink target="_blank" href="https://css-for-js.dev/">
     CSS for JS devs
-  </BeautifulLink>{' '}
-  and a book called:{' '}
-  <BeautifulLink target="_blank" href="https://www.refactoringui.com/book">
+  </BeautifulLink> and a book called: <BeautifulLink
+    target="_blank"
+    href="https://www.refactoringui.com/book"
+  >
     Refactoring UI
-  </BeautifulLink>
-  . The plan is to redesign my blog once I finish those!
+  </BeautifulLink>. The plan is to redesign my blog once I finish those!
 </Paragraph>
 <Paragraph>
   It does not matter what technology you use for your blog as long as you do it.
