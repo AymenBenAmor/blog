@@ -4,6 +4,7 @@ import { posts } from '../getAllPosts';
 import { PersonalInformation } from '@components/PersonalInformation';
 import { PostsContainer } from '@components/PostsContainer';
 import * as React from 'react';
+import NewsletterForm from '@components/NewsletterForm';
 
 const title = "Aymen Ben Amor's blog";
 const description =
@@ -34,8 +35,9 @@ const Home = () => {
         <meta name="twitter:site" content="@BrusselsReact" />
         <meta name="twitter:creator" content="@BrusselsReact" />
       </Head>
-      <PostsContainer posts={posts} title="Recently published articles" />
       <PersonalInformation />
+      <PostsContainer posts={posts} title="Recently published articles" />
+      <NewsletterForm />
     </Layout>
   );
 };

@@ -9,7 +9,7 @@ const StyledLi = tw.li`
   p-2
 `;
 const StyledDiv = tw.div`
-  px-2 flex flex-col justify-end
+  p-2 flex flex-col justify-center
 `;
 
 type SocialLink = {

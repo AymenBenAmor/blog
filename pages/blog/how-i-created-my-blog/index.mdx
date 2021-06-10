@@ -9,7 +9,7 @@ export const meta = {
   title: 'How I created my blog using NextJS and tailwindCSS',
   description:
     'How I created my blog, What technical decisions did I take and why?',
-  image: '/aymen-first-blog-post.jpeg',
+  image: 'aymen-first-blog-post.jpg',
   link: 'how-i-created-my-blog',
   date: 1621873425848,
   readTime: 2,
@@ -133,9 +133,11 @@ export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
   >
     twin.macro
   </BeautifulLink>
-  ... A new CSS in JS library that came out and that support tailwindCSS. You
-  can find the article{' '}
-  <BeautifulLink target="_blank" href="https://mxstbr.com/thoughts/tailwind/">
+  ... A new CSS in JS library that came out and that support tailwindCSS. You can
+  find the article <BeautifulLink
+    target="_blank"
+    href="https://mxstbr.com/thoughts/tailwind/"
+  >
     here
   </BeautifulLink>
 </Paragraph>
@@ -151,14 +153,14 @@ export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
   <BeautifulLink target="_blank" href="https://mdxjs.com/">
     MDX
   </BeautifulLink>
-  : It is "Markdown for the component era" as they explain it themselves. It
-  basically allows us to use markdown and jsx at the same time! we use it in my
-  job for documentation with storybook and it's pretty easy to use and setup.{' '}
+  : It is "Markdown for the component era" as they explain it themselves. It basically
+  allows us to use markdown and jsx at the same time! we use it in my job for documentation
+  with storybook and it's pretty easy to use and setup. <br />
+  With the abundance of gatsby plugins provided for headless CMSs (wordpress,
+  contentful...) it would be easy to use a CMS to create content for my blog.{' '}
   <br />
-  With the abundance of gatsby plugins provided for headless CMSs (wordpress, contentful...)
-  it would be easy to use a CMS to create content for my blog. <br />
-  Being a developer, I like my IDE and don't like leaving it for too long
-  (unless it's to watch dumb netflix shows) So I decided to use MDX.
+  Being a developer, I like my IDE and don't like leaving it for too long (unless
+  it's to watch dumb netflix shows) So I decided to use MDX.
 </Paragraph>
 
 <Heading tag="h2"> Conclusion</Heading>

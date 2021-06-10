@@ -34,16 +34,17 @@ const links = [
 ];
 
 const StyledHeaderContainer = tw.header`
-  w-full shadow-md pt-4 px-4 sm:px-8 justify-center flex flex-row
+  w-full shadow-md pt-4 justify-center flex flex-row px-8
 `;
 
-const StyledHeader = tw.header`
-  max-w-5xl flex flex-row justify-between w-full
+const StyledHeader = styled.div`
+  max-width: 1500px;
+  ${() => tw`flex flex-row justify-between w-full md:px-20`}
 `;
 
 // todo this
 const StyledLogoContainer = tw.div`
-  p-2
+  py-2
 `;
 
 const StyledLogo = tw.a`
@@ -83,13 +84,17 @@ const MenuIcon = tw.div`
 const StyledBarUp = styled.span`
   transition: transform 250ms;
   ${() => tw`w-8 h-1 bg-primary m-1 block`}
-  ${({ open }: Open) => `transform: ${open ? 'rotate(45deg)' : 'none'}`}
+  ${({ open }: Open) => `transform: ${open ? 'rotate(45deg)' : 'none'};`}
+  ${({ open }: Open) =>
+    `background-color: ${open ? 'white' : 'var(--primary)'};`}
 `;
 const StyledBarDown = styled.span`
   transition: transform 250ms;
   ${() => tw`w-8 h-1 bg-primary m-1 block`}
   ${({ open }: Open) =>
-    `transform: ${open ? 'rotate(-45deg) translate(5px, -6px)' : 'none'}`}
+    `transform: ${open ? 'rotate(-45deg) translate(5px, -6px)' : 'none'};`}
+  ${({ open }: Open) =>
+    `background-color: ${open ? 'white' : 'var(--primary)'};`}
 `;
 
 const StyledMobileNav = styled.div`

@@ -4,6 +4,7 @@ import Head from 'next/head';
 import type { Meta } from './PostsContainer';
 import { Heading } from '@components/Heading';
 import ImageContainer from '@components/ImageContainer';
+import NewsletterForm from '@components/NewsletterForm';
 
 type BlogPostProps = {
   children: React.ReactNode;
@@ -32,16 +33,15 @@ export const BlogPost = ({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image:src" content={image} />
+        <meta name="twitter:image:src" content={`${domain}${image}`} />
         <meta name="twitter:site" content="@BrusselsReact" />
         <meta name="twitter:creator" content="@BrusselsReact" />
       </Head>
-      <Heading tag="h1">
-        How I created my blog and which decisions did I take
-      </Heading>
+      <Heading tag="h1">{title}</Heading>
 
-      <ImageContainer src={image} />
+      <ImageContainer src={`/${image}`} />
       {children}
+      <NewsletterForm />
     </Article>
   );
 };

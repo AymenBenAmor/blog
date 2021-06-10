@@ -1,6 +1,5 @@
 import tw, { styled } from 'twin.macro';
 import Image from 'next/image';
-import NewsletterForm from '@components/NewsletterForm';
 import { Heading } from '@components/Heading';
 import { BeautifulLink } from '@components/BeautifulLink';
 import { Paragraph } from '@components/Paragraph';
@@ -11,7 +10,7 @@ const StyledPersonalInfo = styled.div`
   && {
     grid-column: 1 / -1;
   }
-  ${() => tw`flex flex-col md:flex-row`}
+  ${() => tw`flex flex-col md:flex-row lg:mx-auto`}
 `;
 
 const StyledPresentation = tw.div`
@@ -20,7 +19,7 @@ const StyledPresentation = tw.div`
 
 const StyledImageContainer = styled.div`
   max-height: 653px;
-  ${() => tw`flex flex-row justify-center lg:w-1/2`}
+  ${() => tw`flex flex-row justify-center lg:w-3/12`}
 `;
 
 const StyledContent = tw.div`
@@ -83,16 +82,15 @@ export const PersonalInformation = () => {
             </Paragraph>
           </StyledDiv>
         </StyledContent>
-        <NewsletterForm />
       </StyledPresentation>
       <StyledImageContainer>
         <Image
           layout="intrinsic"
-          src="/aymen-simpson-transparent.png"
+          src="/aymen-simpson-transparent.jpg"
           alt="Simpsons style picture of Aymen"
-          quality={50}
+          quality={100}
           width={200}
-          height={653}
+          height={683}
         />
       </StyledImageContainer>
     </StyledPersonalInfo>
