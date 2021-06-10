@@ -43,8 +43,9 @@ const StyledHeader = styled.div`
 `;
 
 // todo this
-const StyledLogoContainer = tw.div`
-  py-2
+const StyledLogoContainer = styled.div`
+  font-family: 'La Belle Aurore', cursive;
+  ${() => tw`py-2`}
 `;
 
 const StyledLogo = tw.a`
