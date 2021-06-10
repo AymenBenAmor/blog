@@ -1,6 +1,5 @@
 import * as React from 'react';
 import tw from 'twin.macro';
-import Image from 'next/image';
 
 const StyledUL = tw.ul`
   flex flex-row justify-center
@@ -42,7 +41,7 @@ type Icon = {
 };
 
 const displayIcon = ({ label, icon }: Icon) => (
-  <Image alt={label} src={`/${icon}.svg`} height={20} width={20} />
+  <img alt={label} src={`/${icon}.svg`} height={20} width={20} />
 );
 
 export const SocialLinks = () => (
