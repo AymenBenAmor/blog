@@ -42,7 +42,6 @@ const StyledHeader = styled.div`
   ${() => tw`flex flex-row justify-between w-full md:px-20`}
 `;
 
-// todo this
 const StyledLogoContainer = styled.div`
   font-family: 'La Belle Aurore', cursive;
   ${() => tw`py-2`}
