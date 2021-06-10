@@ -27,7 +27,7 @@ export const BlogPost = ({
         <meta property="og:type" content="article" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
+        <meta property="og:image" content={`${domain}${image}`} />
         <meta property="og:url" content={link} />
         <meta property="og:site_name" content="React Brussels" />
         <meta name="twitter:card" content="summary_large_image" />
