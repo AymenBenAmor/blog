@@ -88,7 +88,7 @@ export const PersonalInformation = () => {
           layout="intrinsic"
           src="/aymen-simpson-transparent.jpg"
           alt="Simpsons style picture of Aymen"
-          quality={100}
+          quality={50}
           width={200}
           height={683}
         />

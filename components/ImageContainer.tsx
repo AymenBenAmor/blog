@@ -7,7 +7,7 @@ const StyledImageContainer = tw.div`
 
 const ImageContainer = ({ src, ...props }: { src: string }) => (
   <StyledImageContainer>
-    <Image src={src} width={800} height={550} {...props} />
+    <Image src={src} width={800} height={550} quality={50} {...props} />
   </StyledImageContainer>
 );
 
