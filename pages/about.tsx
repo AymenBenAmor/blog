@@ -7,7 +7,7 @@ import { Heading } from '@components/Heading';
 const title = "Aymen Ben Amor's career";
 const description =
   'The presentation of the Career of Aymen Ben Amor: A frontend Developer based in Brussels';
-const link = 'https://www.aymenbenamor.com/about';
+const link = 'https://www.aymenbenamor.com/about/';
 const image = '/aymen-simpson.jpeg';
 
 const Container = styled.div``;
@@ -17,7 +17,6 @@ const About = () => {
     <Layout>
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
         <link rel="canonical" href={link} />

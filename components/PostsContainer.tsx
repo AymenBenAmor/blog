@@ -9,6 +9,7 @@ export type Meta = {
   title: string;
   image: string;
   link: string;
+  hidden: boolean;
 };
 
 export type Post = {
@@ -29,15 +30,17 @@ const StyledPostsContainer = styled.div`
   ${() => tw`sm:px-20 lg:mx-auto`}
 `;
 const StyledPostsList = tw.div`
-flex-col flex sm:flex-row
+flex-col flex md:flex-row
 `;
 export const PostsContainer = ({ posts, title }: Props) => (
   <StyledPostsContainer>
     <Heading tag="h1">{title}</Heading>
     <StyledPostsList>
-      {posts.map(post => (
-        <PostSummary key={post.link} post={post} />
-      ))}
+      {posts
+        .filter(p => !p.module.meta.hidden)
+        .map(post => (
+          <PostSummary key={post.link} post={post} />
+        ))}
     </StyledPostsList>
   </StyledPostsContainer>
 );

@@ -9,7 +9,7 @@ const StyledBlogPostSummary = styled.article`
       transition: visibility 0.5s ease-in;
     }
   }
-  ${() => tw`p-4 bg-gray-100 rounded-xl`}
+  ${() => tw`p-4 md:mx-2 md:my-0 my-2 bg-gray-100 rounded-xl`}
 `;
 
 const StyledReadMore = tw.div`
