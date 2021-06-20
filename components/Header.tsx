@@ -1,6 +1,7 @@
 import * as React from 'react';
 import tw, { styled } from 'twin.macro';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ScreenReadersOnly } from '@components/ScreenReaderOnly';
 import { SocialLinks } from '@components/SocialLinks';
 import { Copyright } from '@components/Copyright';
@@ -34,7 +35,7 @@ const links = [
 ];
 
 const StyledHeaderContainer = tw.header`
-  w-full shadow-md pt-4 justify-center flex flex-row px-8
+  w-full shadow-md justify-center flex flex-row px-8
 `;
 
 const StyledHeader = styled.div`
@@ -63,7 +64,7 @@ const StyledLink = styled.a`
 `;
 
 const StyledUL = tw.ul`
-  flex flex-row justify-between hidden md:flex
+  flex flex-row justify-between hidden md:flex pt-4
 `;
 
 const StyledULMobile = tw.ul`
@@ -141,7 +142,14 @@ const Header = () => {
       <StyledHeader>
         <StyledLogoContainer>
           <Link href="/">
-            <StyledLogo href="/">Aymen Ben Amor</StyledLogo>
+            <StyledLogo href="/">
+              <Image
+                src="/aymen-logo.png"
+                quality={100}
+                width={256}
+                height={58}
+              />
+            </StyledLogo>
           </Link>
         </StyledLogoContainer>
         <nav>
